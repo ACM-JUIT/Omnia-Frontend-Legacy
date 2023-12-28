@@ -54,11 +54,11 @@ class _LoginState extends State<Login> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 50,),
-                        Row(
+                        const SizedBox(height: 50,),
+                        const Row(
                           children: [
-                            const SizedBox(width: 50,),
-                            const Text('Log In',   
+                            SizedBox(width: 50,),
+                            Text('Log In',   
                                 // textAlign: TextAlign.end,                     
                                   style: TextStyle(
                                     color: Colors.white,
@@ -72,8 +72,8 @@ class _LoginState extends State<Login> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             
-                            SizedBox(height: 10,),
-                            Container(
+                            const SizedBox(height: 10,),
+                            SizedBox(
                               width: 380,
                               height:60,
                               child: TextFormField(
@@ -103,8 +103,8 @@ class _LoginState extends State<Login> {
                                         },
                                       ),
                             ),
-                          SizedBox(height: 10,),
-                          Container(
+                          const SizedBox(height: 10,),
+                          SizedBox(
                           width: 380,
                           height:60,
                           child: TextFormField(
@@ -136,7 +136,7 @@ class _LoginState extends State<Login> {
                                     },
                                   ),
                         ),
-                        SizedBox(height: 20,),
+                        const SizedBox(height: 20,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -154,7 +154,7 @@ class _LoginState extends State<Login> {
                                   Navigator.push(context, 
                                   MaterialPageRoute(
                                     builder: (context) => const MyHomePage(title: 'Tester Home'),
-                                    settings: RouteSettings(name: 'Home'),
+                                    settings: const RouteSettings(name: 'Home'),
                                       )                                    
                                     );
                                 }, 

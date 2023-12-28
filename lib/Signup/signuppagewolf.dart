@@ -34,12 +34,12 @@ class _SignupState extends State<SignupAnimate> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 300,),
+                    const SizedBox(height: 300,),
                     Column(
                       children: [
                         // SizedBox(height: 60,),
                         TextButton.icon(
-                        style: ButtonStyle(
+                        style: const ButtonStyle(
                           alignment: Alignment.center,
                           iconSize: MaterialStatePropertyAll<double>(75),
                           foregroundColor: MaterialStatePropertyAll<Color>(Colors.white),),
@@ -47,13 +47,13 @@ class _SignupState extends State<SignupAnimate> {
                           Navigator.push(context, 
                             MaterialPageRoute(
                               builder: (context) => const Signup(),
-                              settings: RouteSettings(name: 'Signup'),
+                              settings: const RouteSettings(name: 'Signup'),
                               ),
                           );
                         }, 
-                        icon: Icon(Icons.touch_app), 
-                        label: Text('')),
-                        Text('Tap',
+                        icon: const Icon(Icons.touch_app), 
+                        label: const Text('')),
+                        const Text('Tap',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w800,
@@ -62,7 +62,7 @@ class _SignupState extends State<SignupAnimate> {
                       ],
                     ),
                     
-                    SizedBox(height: 100,),
+                    const SizedBox(height: 100,),
                     Container(
                       height: 76,
                       width: 148,

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Omnia',
       theme: ThemeData(
-        pageTransitionsTheme: PageTransitionsTheme(
+        pageTransitionsTheme: const PageTransitionsTheme(
           builders: {
             TargetPlatform.android: ZoomPageTransitionsBuilder(),
             TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
@@ -64,13 +64,13 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context)=> const SignupAnimate(),
-                  settings: RouteSettings(name: 'Splash 0'),
+                  settings: const RouteSettings(name: 'Splash 0'),
                 ));
               },
               child: Container(
                         width: 60,
                         height: 60,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                         image: DecorationImage(image: AssetImage("assets/wot.png")),
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                               ),
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: (){
           Navigator.push(context, MaterialPageRoute(
             builder: (context) => const SignupAnimate(),
-            settings: RouteSettings(name: 'Tap Sign'),
+            settings: const RouteSettings(name: 'Tap Sign'),
             ),
           );
         },

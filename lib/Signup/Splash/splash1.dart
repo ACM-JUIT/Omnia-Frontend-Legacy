@@ -11,12 +11,12 @@ class Splash1 extends StatefulWidget {
 class _Splash1State extends State<Splash1> {
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 1250), () {
+    Future.delayed(const Duration(milliseconds: 1250), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => Splash2(),
-          settings: RouteSettings(name: 'Splash 2'),
+          builder: (context) => const Splash2(),
+          settings: const RouteSettings(name: 'Splash 2'),
         ),
       );
     });
@@ -46,13 +46,13 @@ class _Splash1State extends State<Splash1> {
                         width: 125,
                         height: 125,
                         // color: Colors.white,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(40)),
                         ),
                       ),
                     ),
-                    SizedBox(height: 240,),
+                    const SizedBox(height: 240,),
                     Container(
                       height: 76,
                       width: 148,
@@ -66,7 +66,7 @@ class _Splash1State extends State<Splash1> {
                         )
                       ),
                       ),
-                      SizedBox(height: 100,)
+                      const SizedBox(height: 100,)
                   ],
                                 ),
                 ),

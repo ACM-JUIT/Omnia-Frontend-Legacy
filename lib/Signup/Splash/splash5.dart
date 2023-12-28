@@ -11,12 +11,12 @@ class Splash5 extends StatefulWidget {
 class _Splash5State extends State<Splash5> {
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 2000), () {
+    Future.delayed(const Duration(milliseconds: 2000), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => SignupAnimate(),
-          settings: RouteSettings(name: 'Sign Tap'),
+          builder: (context) => const SignupAnimate(),
+          settings: const RouteSettings(name: 'Sign Tap'),
         ),
       );
     });
@@ -40,7 +40,7 @@ class _Splash5State extends State<Splash5> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
                         Text('Omnia',
@@ -62,7 +62,7 @@ class _Splash5State extends State<Splash5> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 240,),
+                    const SizedBox(height: 240,),
                     Container(
                       height: 76,
                       width: 148,
@@ -76,7 +76,7 @@ class _Splash5State extends State<Splash5> {
                         )
                       ),
                       ),
-                      SizedBox(height: 100,)
+                      const SizedBox(height: 100,)
                   ],
                                 ),
                 ),

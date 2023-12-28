@@ -11,12 +11,12 @@ class Splash2 extends StatefulWidget {
 class _Splash2State extends State<Splash2> {
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 1500), () {
+    Future.delayed(const Duration(milliseconds: 1500), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => Splash3(),
-          settings: RouteSettings(name: 'Splash 3'),
+          builder: (context) => const Splash3(),
+          settings: const RouteSettings(name: 'Splash 3'),
         ),
       );
     });
@@ -44,7 +44,7 @@ class _Splash2State extends State<Splash2> {
                       tag: 'animatedElement', // Unique tag for the hero animation
                       child: TweenAnimationBuilder<double>(
                           tween: Tween(begin: 0.0, end: 0.25),
-                          duration: Duration(milliseconds: 1500),
+                          duration: const Duration(milliseconds: 1500),
                           builder: (context, value, child) {
                             return Transform.rotate(
                               angle: value * 4 * 3.141, // quarter spin with some bounce
@@ -58,14 +58,14 @@ class _Splash2State extends State<Splash2> {
                           width: 200,
                           height: 200,
                           // color: Colors.white,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.all(Radius.circular(40)),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 220,),
+                    const SizedBox(height: 220,),
                     Container(
                       height: 76,
                       width: 148,
@@ -79,7 +79,7 @@ class _Splash2State extends State<Splash2> {
                         )
                       ),
                       ),
-                      SizedBox(height: 100,)
+                      const SizedBox(height: 100,)
                   ],
                                 ),
                 ),
