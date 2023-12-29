@@ -39,11 +39,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -62,33 +59,37 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context)=> const SignupAnimate(),
-                  settings: const RouteSettings(name: 'Splash 0'),
-                ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignupAnimate(),
+                      settings: const RouteSettings(name: 'Splash 0'),
+                    ));
               },
               child: Container(
-                        width: 60,
-                        height: 60,
-                        decoration: const BoxDecoration(
-                        image: DecorationImage(image: AssetImage("assets/wot.png")),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                              ),
-                            ),
+                width: 60,
+                height: 60,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/wot.png")),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+              ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) => const SignupAnimate(),
-            settings: const RouteSettings(name: 'Tap Sign'),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SignupAnimate(),
+              settings: const RouteSettings(name: 'Tap Sign'),
             ),
           );
         },
         child: const Icon(Icons.navigate_next),
-      ), 
+      ),
     );
   }
 }
