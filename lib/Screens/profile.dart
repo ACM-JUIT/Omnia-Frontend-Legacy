@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:omnia/Theme/theme.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -6,9 +7,10 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: primaryColor,
       body: Center(
-        child: Text("Profile"),
+        child: Text("Profile",
+            style: TextStyle(color: Colors.white, fontSize: 30)),
       ),
     );
   }

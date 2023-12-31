@@ -19,6 +19,7 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         // scrolledUnderElevation: double.infinity,
         // elevation: 0.0,
         // forceMaterialTransparency: true,

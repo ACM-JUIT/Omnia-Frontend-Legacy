@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:omnia/Theme/theme.dart';
 
 class Work extends StatelessWidget {
   const Work({super.key});
@@ -6,9 +7,10 @@ class Work extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.yellow,
+      backgroundColor: primaryColor,
       body: Center(
-        child: Text("Work"),
+        child:
+            Text("Work", style: TextStyle(color: Colors.white, fontSize: 30)),
       ),
     );
   }
