@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Screens/homescreen.dart';
+import 'package:omnia/Screens/Home/homescreen.dart';
 import 'package:omnia/Signup/signup.dart';
 
 class Login extends StatefulWidget {
@@ -19,6 +19,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         // scrolledUnderElevation: double.infinity,
         // elevation: 0.0,
         // forceMaterialTransparency: true,

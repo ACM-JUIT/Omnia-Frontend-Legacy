@@ -12,13 +12,6 @@ class _SignupState extends State<SignupAnimate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        // scrolledUnderElevation: double.infinity,
-        // elevation: 0.0,
-        // forceMaterialTransparency: true,
-        backgroundColor: Colors.transparent,
-      ),
       body: Container(
         height: 1864,
         width: double.infinity,

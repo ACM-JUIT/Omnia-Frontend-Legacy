@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Screens/homescreen.dart';
+import 'package:omnia/Screens/Home/homescreen.dart';
 import 'package:omnia/Signup/login.dart';
 
 class Signup extends StatefulWidget {
@@ -19,6 +19,7 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         iconTheme: const IconThemeData(color: Colors.white),
         // scrolledUnderElevation: double.infinity,
         // elevation: 0.0,

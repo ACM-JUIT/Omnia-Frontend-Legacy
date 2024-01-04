@@ -12,6 +12,7 @@ class Community extends StatelessWidget {
       length: 2,
       child: Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             iconTheme: const IconThemeData(color: Colors.white),
             backgroundColor: primaryColor,
             title: const Text(
