@@ -37,7 +37,7 @@ class _ACMState extends State<ACM> {
                           height: 15,
                         ),
                         Image(
-                          image: AssetImage("assets/acmlogo.png"),
+                          image: AssetImage(acmLogo),
                           color: itemColor,
                           height: 35,
                           width: 100,
@@ -46,7 +46,7 @@ class _ACMState extends State<ACM> {
                           height: 15,
                         ),
                         Text(
-                          "What is ACM? organized by JUIT, is the ultimate cybersecurity showdown where digital defenders come together to test their mettle, showcasing their skills and knowledge. It's a vibrant platform where students and professionals dive into the challenges of the digital age, participating in competitions, workshops, and expert talks. Hache is the hub for cybersecurity enthusiasts to learn, collaborate, and",
+                          acmDescription,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,

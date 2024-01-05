@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/Theme/theme.dart';
+import 'package:omnia/cardvalues.dart';
 
 class Members extends StatefulWidget {
-  const Members({super.key});
+  const Members({Key? key}) : super(key: key);
 
   @override
   State<Members> createState() => _MembersState();
 }
 
 class _MembersState extends State<Members> {
-  List<String> items = List.generate(50, (index) => 'Item ${index + 1}');
+  List<String> items =
+      List.generate(membersCardNo, (index) => 'Item ${index + 1}');
   List<String> filteredItems = [];
 
   @override
@@ -21,7 +23,14 @@ class _MembersState extends State<Members> {
   void filterItems(String query) {
     setState(() {
       filteredItems = items
-          .where((item) => item.toLowerCase().contains(query.toLowerCase()))
+          .where((item) =>
+              item.toLowerCase().contains(query.toLowerCase()) ||
+              usernames[items.indexOf(item)]
+                  .toLowerCase()
+                  .contains(query.toLowerCase()) ||
+              initials[items.indexOf(item)]
+                  .toLowerCase()
+                  .contains(query.toLowerCase()))
           .toList();
     });
   }
@@ -49,7 +58,6 @@ class _MembersState extends State<Members> {
                     borderRadius: BorderRadius.all(Radius.circular(7.0)),
                   ),
                   labelText: 'Search',
-                  // labelStyle: TextStyle(color: itemColor),
                   prefixIcon: Icon(
                     Icons.search,
                   ),
@@ -61,26 +69,52 @@ class _MembersState extends State<Members> {
             child: ListView.builder(
               itemCount: filteredItems.length,
               itemBuilder: (context, index) {
+                final itemIndex = items.indexOf(filteredItems[index]);
+
                 return Container(
-                    height: 70.0,
-                    decoration: BoxDecoration(
-                      color: cardColor,
-                      borderRadius: BorderRadius.circular(9.0),
-                      border: Border.all(color: itemColor),
-                    ),
-                    margin: const EdgeInsets.all(8.0),
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        const Icon(Icons.image, size: 35.0, color: Colors.grey),
-                        const SizedBox(width: 8.0),
-                        Text(
-                          filteredItems[index],
-                          style: const TextStyle(color: Colors.white),
+                  height: 70.0,
+                  decoration: BoxDecoration(
+                    color: cardColor,
+                    borderRadius: BorderRadius.circular(9.0),
+                    border: Border.all(color: itemColor),
+                  ),
+                  margin: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 46,
+                        width: 46,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromRGBO(217, 217, 217, 1),
                         ),
-                        // Text(filteredItems[index]),
-                      ],
-                    ));
+                        alignment: Alignment.center,
+                        child: const Icon(
+                          Icons.image,
+                          color: imageColor,
+                        ),
+                      ),
+                      const SizedBox(width: 8.0),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            initials[itemIndex],
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            usernames[itemIndex],
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                );
               },
             ),
           ),
