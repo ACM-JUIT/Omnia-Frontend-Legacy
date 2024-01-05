@@ -18,12 +18,14 @@ class _MainHomeState extends State<MainHome> {
         automaticallyImplyLeading: false,
         iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: primaryColor,
-        title: Image.asset(
-          "assets/name.png",
-          // fit: BoxFit.values[1],
-          height: 50,
+        title: Align(
+          alignment: Alignment.centerLeft,
+          child: Image.asset(
+            "assets/name.png",
+            height: 50,
+          ),
         ),
-        centerTitle: true,
+        centerTitle: false,
       ),
       endDrawer: const Drawer(),
       backgroundColor: primaryColor,
@@ -31,6 +33,22 @@ class _MainHomeState extends State<MainHome> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Container(
+                color: Colors.transparent,
+                child: const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Upcoming Events",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -52,7 +70,7 @@ class _MainHomeState extends State<MainHome> {
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.grey,
+                            color: imagebackColor,
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +81,7 @@ class _MainHomeState extends State<MainHome> {
                                 size: 40,
                               ),
                               Container(
-                                color: Colors.grey,
+                                color: imagebackColor,
                                 child: const SlideCountdown(
                                   duration: Duration(days: 1),
                                 ),
@@ -74,58 +92,55 @@ class _MainHomeState extends State<MainHome> {
                         const SizedBox(
                           height: 15,
                         ),
-                        Container(
-                          color: cardColor,
-                          child: Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Text(
-                                      "Tech-O-Ween",
-                                      overflow: TextOverflow.ellipsis,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 22,
-                                      ),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const Text(
+                                    "Tech-O-Ween",
+                                    overflow: TextOverflow.ellipsis,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 22,
                                     ),
-                                    Container(
-                                      height: 20,
-                                      width: 80,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(color: itemColor),
-                                        borderRadius: BorderRadius.circular(6),
-                                        color: dateColor,
-                                      ),
-                                      child: const Center(
-                                        child: Text(
-                                          setDate,
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                          ),
+                                  ),
+                                  Container(
+                                    height: 20,
+                                    width: 80,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(color: itemColor),
+                                      borderRadius: BorderRadius.circular(6),
+                                      color: dateColor,
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        setDate,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 12,
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                    height:
-                                        10), // Add spacing between the two rows
-                                const Text(
-                                  "In October's spirit, screens ignite Coding, spooks, and thrills unit...",
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: Colors.white,
                                   ),
+                                ],
+                              ),
+                              const SizedBox(
+                                  height:
+                                      10), // Add spacing between the two rows
+                              const Text(
+                                "In October's spirit, screens ignite Coding, spooks, and thrills unit...",
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  color: Colors.white,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
