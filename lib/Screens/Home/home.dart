@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:omnia/Screens/Home/events.dart';
 import 'package:omnia/cardvalues.dart';
 import 'package:omnia/Theme/theme.dart';
 
@@ -12,6 +13,17 @@ class MainHome extends StatefulWidget {
 }
 
 class _MainHomeState extends State<MainHome> {
+  void _navigateToDetailsPage(
+      String heading, String subheading, String imageUrl) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DetailsPage(
+            heading: heading, subheading: subheading, imageUrl: imageUrl),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -185,66 +197,76 @@ class _MainHomeState extends State<MainHome> {
             ),
             Expanded(
               child: ListView.builder(
+                reverse: false,
                 itemCount: homeCardNo,
                 itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(colors: [
-                          gradientColor2,
-                          gradientColor1,
-                        ]),
-                        border: Border.all(color: itemColor),
-                        borderRadius: BorderRadius.circular(10),
-                        color: cardColor,
-                      ),
-                      height: 120,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            child: Stack(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  child: Image.asset(
-                                    homeImagesList[index],
-                                    alignment: Alignment.center,
-                                    fit: BoxFit.cover,
-                                    width: double.infinity,
-                                    height: double.infinity,
+                  return GestureDetector(
+                    onTap: () {
+                      _navigateToDetailsPage(
+                        homeHeadings[index],
+                        homeSubheadings[index],
+                        homeImagesList[index],
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(colors: [
+                            gradientColor2,
+                            gradientColor1,
+                          ]),
+                          border: Border.all(color: itemColor),
+                          borderRadius: BorderRadius.circular(10),
+                          color: cardColor,
+                        ),
+                        height: 120,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    child: Image.asset(
+                                      homeImagesList[index],
+                                      alignment: Alignment.center,
+                                      fit: BoxFit.cover,
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                    ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(12.0),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        homeHeadings[index],
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          homeHeadings[index],
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
-                                      ),
-                                      Text(
-                                        homeSubheadings[index],
-                                        style: const TextStyle(
-                                          color: Colors.white,
+                                        Text(
+                                          homeSubheadings[index],
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   );

@@ -34,7 +34,7 @@ const acmCardNo = 3;
 const acmLogo = "assets/acmlogo.png";
 
 const acmDescription =
-    "What is ACM? organized by JUIT, is the ultimate cybersecurity showdown where digital defenders come together to test their mettle, showcasing their skills and knowledge. It's a vibrant platform where students and professionals dive into the challenges of the digital age, participating in competitions, workshops, and expert talks. Hache is the hub for cybersecurity enthusiasts to learn, collaborate, and";
+    "What is ACM?  Acm student chapter waknaghat comprises of several teams which help the student grow and learn of their interests and where they can excel.";
 List<String> acmHeadings = [
   "2021-22",
   "2020-21",
@@ -47,11 +47,11 @@ List<String> acmSubheadings = [
   "Tenure",
 ];
 
-// List<String> acmImages = [
-//   "assets/image1.png",
-//   "assets/image2.png",
-//   "assets/image3.png",
-// ];
+List<String> acmImages = [
+  "assets/2021.png",
+  "assets/2020.png",
+  "assets/2019.png",
+];
 
 //.......MEMBERS CARD VALUES........//
 
