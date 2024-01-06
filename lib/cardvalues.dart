@@ -2,6 +2,11 @@
 
 const setDate = "10-05-2024";
 const homeCardNo = 4;
+
+const homeImage = "assets/techoween.png";
+
+const registerLink = "https://www.youtube.com/";
+
 List<String> homeHeadings = [
   "Hache",
   "Qriosity",
@@ -16,12 +21,12 @@ List<String> homeSubheadings = [
   "Hackathon"
 ];
 
-// List<String> homeImages = [
-//   "assets/image1.png",
-//   "assets/image2.png",
-//   "assets/image3.png",
-// ];
-
+List<String> homeImagesList = [
+  "assets/hache.png",
+  "assets/qriosity.png",
+  "assets/insideout.png",
+  "assets/horizon.png",
+];
 //.......COMMUNITY CARD VALUES........//
 
 const acmCardNo = 3;

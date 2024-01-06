@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/cardvalues.dart';
 import 'package:omnia/Theme/theme.dart';
-import 'package:slide_countdown/slide_countdown.dart';
+
+import 'package:url_launcher/url_launcher_string.dart';
 
 class MainHome extends StatefulWidget {
   const MainHome({super.key});
@@ -75,17 +76,32 @@ class _MainHomeState extends State<MainHome> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Icon(
-                                Icons.image,
-                                color: imageColor,
-                                size: 40,
-                              ),
-                              Container(
-                                color: imagebackColor,
-                                child: const SlideCountdown(
-                                  duration: Duration(days: 1),
+                              Expanded(
+                                child: Stack(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      child: Image.asset(
+                                        homeImage,
+                                        alignment: Alignment.center,
+                                        fit: BoxFit.cover,
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                      ),
+                                    ),
+
+                                    // Align(
+                                    //   alignment: Alignment.bottomCenter,
+                                    //   child: Container(
+                                    //     color: Colors.transparent,
+                                    //     child: const SlideCountdown(
+                                    //       duration: Duration(days: 1),
+                                    //     ),
+                                    //   ),
+                                    // ),
+                                  ],
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -110,20 +126,25 @@ class _MainHomeState extends State<MainHome> {
                                       fontSize: 22,
                                     ),
                                   ),
-                                  Container(
-                                    height: 20,
-                                    width: 80,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(color: itemColor),
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: dateColor,
-                                    ),
-                                    child: const Center(
-                                      child: Text(
-                                        setDate,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12,
+                                  InkWell(
+                                    onTap: () {
+                                      launchUrlString(registerLink);
+                                    },
+                                    child: Container(
+                                      height: 20,
+                                      width: 80,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: itemColor),
+                                        borderRadius: BorderRadius.circular(6),
+                                        color: dateColor,
+                                      ),
+                                      child: const Center(
+                                        child: Text(
+                                          "Register",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -149,6 +170,19 @@ class _MainHomeState extends State<MainHome> {
                 ),
               ),
             ),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Popular Events",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
             Expanded(
               child: ListView.builder(
                 itemCount: homeCardNo,
@@ -166,44 +200,51 @@ class _MainHomeState extends State<MainHome> {
                         color: cardColor,
                       ),
                       height: 120,
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                                alignment: Alignment.center,
-                                color: Colors.transparent,
-                                child: const Icon(
-                                  Icons.image,
-                                  color: imageColor,
-                                  size: 40.0,
-                                )),
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    homeHeadings[index],
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Stack(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  child: Image.asset(
+                                    homeImagesList[index],
+                                    alignment: Alignment.center,
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                    height: double.infinity,
                                   ),
-                                  Text(
-                                    homeSubheadings[index],
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                    ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        homeHeadings[index],
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        homeSubheadings[index],
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   );
