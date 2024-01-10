@@ -34,7 +34,7 @@ const acmCardNo = 3;
 const acmLogo = "assets/acmlogo.png";
 
 const acmDescription =
-    "What is ACM?  Acm student chapter waknaghat comprises of several teams which help the student grow and learn of their interests and where they can excel.";
+    "What is ACM? Acm student chapter waknaghat comprises of several teams which help the student grow and learn of their interests and where they can excel.";
 List<String> acmHeadings = [
   "2021-22",
   "2020-21",

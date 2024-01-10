@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:omnia/Screens/Drawer/drawer.dart';
 import 'package:omnia/Screens/Home/events.dart';
 import 'package:omnia/cardvalues.dart';
 import 'package:omnia/Theme/theme.dart';
@@ -40,7 +41,7 @@ class _MainHomeState extends State<MainHome> {
         ),
         centerTitle: false,
       ),
-      endDrawer: const Drawer(),
+      endDrawer: const CustomDrawer(),
       backgroundColor: primaryColor,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -101,7 +102,6 @@ class _MainHomeState extends State<MainHome> {
                                         height: double.infinity,
                                       ),
                                     ),
-
                                     // Align(
                                     //   alignment: Alignment.bottomCenter,
                                     //   child: Container(
