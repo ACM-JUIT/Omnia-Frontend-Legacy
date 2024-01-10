@@ -70,9 +70,9 @@ List<String> resoHeadings = [
   "AI/ML"
 ];
 
-// List<String> acmImages = [
-//   "assets/image1.png",
-//   "assets/image2.png",
-//   "assets/image3.png",
-// ];
+List<String> acmImages = [
+  "assets/qriosity.png",
+  "assets/qriosity.png",
+  "assets/qriosity.png",
+];
 
