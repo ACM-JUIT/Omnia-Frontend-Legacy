@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:omnia/Resources/Theme/theme.dart';
 import 'package:omnia/Screens/Community/acmevents.dart';
 import 'package:omnia/cardvalues.dart';
-import 'package:omnia/Resources/Theme/theme.dart';
 
 class ACM extends StatefulWidget {
   const ACM({Key? key}) : super(key: key);
@@ -106,7 +106,7 @@ class _ACMState extends State<ACM> {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(10.0),
                                     child: Image.asset(
-                                      acmImages[index],
+                                      tenureImages[index],
                                       alignment: Alignment.center,
                                       fit: BoxFit.cover,
                                       width: double.infinity,
