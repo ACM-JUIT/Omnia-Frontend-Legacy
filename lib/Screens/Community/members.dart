@@ -68,7 +68,7 @@ class _MembersState extends State<Members> {
                       borderRadius: BorderRadius.circular(9.0),
                       border: Border.all(color: itemColor),
                     ),
-                    margin: const EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
