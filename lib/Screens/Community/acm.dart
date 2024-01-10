@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:omnia/Screens/Community/acmevents.dart';
 import 'package:omnia/cardvalues.dart';
 import 'package:omnia/Resources/Theme/theme.dart';
 
@@ -10,6 +11,18 @@ class ACM extends StatefulWidget {
 }
 
 class _ACMState extends State<ACM> {
+  // Function to navigate to the details page with the selected card's data
+  void _navigateToDetailsPage(
+      String heading, String subheading, String imageUrl) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ACMDetailsPage(
+            heading: heading, subheading: subheading, imageUrl: imageUrl),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +34,7 @@ class _ACMState extends State<ACM> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 320,
+                height: 220,
                 width: 380,
                 decoration: BoxDecoration(
                   border: Border.all(color: itemColor),
@@ -37,7 +50,7 @@ class _ACMState extends State<ACM> {
                           height: 15,
                         ),
                         Image(
-                          image: AssetImage("assets/acmlogo.png"),
+                          image: AssetImage(acmLogo),
                           color: itemColor,
                           height: 35,
                           width: 100,
@@ -46,7 +59,7 @@ class _ACMState extends State<ACM> {
                           height: 15,
                         ),
                         Text(
-                          "What is ACM? organized by JUIT, is the ultimate cybersecurity showdown where digital defenders come together to test their mettle, showcasing their skills and knowledge. It's a vibrant platform where students and professionals dive into the challenges of the digital age, participating in competitions, workshops, and expert talks. Hache is the hub for cybersecurity enthusiasts to learn, collaborate, and",
+                          acmDescription,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
@@ -62,50 +75,66 @@ class _ACMState extends State<ACM> {
               child: ListView.builder(
                 itemCount: acmCardNo,
                 itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(colors: [
-                          gradientColor2,
-                          gradientColor1,
-                        ]),
-                        border: Border.all(color: itemColor),
-                        borderRadius: BorderRadius.circular(10),
-                        color: cardColor,
-                      ),
-                      height: 120,
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
+                  return GestureDetector(
+                    onTap: () {
+                      _navigateToDetailsPage(
+                        acmSubheadings[index],
+                        acmHeadings[index],
+                        acmImages[index],
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(colors: [
+                            gradientColor2,
+                            gradientColor1,
+                          ]),
+                          border: Border.all(color: itemColor),
+                          borderRadius: BorderRadius.circular(10),
+                          color: cardColor,
+                        ),
+                        height: 120,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
-                                alignment: Alignment.center,
-                                color: Colors.transparent,
-                                child: const Icon(
-                                  Icons.image,
-                                  color: imageColor,
-                                  size: 40.0,
-                                )),
                             Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              child: Stack(
                                 children: [
-                                  Text(
-                                    acmSubheadings[index],
-                                    style: const TextStyle(
-                                      color: Colors.white,
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    child: Image.asset(
+                                      acmImages[index],
+                                      alignment: Alignment.center,
+                                      fit: BoxFit.cover,
+                                      width: double.infinity,
+                                      height: double.infinity,
                                     ),
                                   ),
-                                  Text(
-                                    acmHeadings[index],
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          acmSubheadings[index],
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        Text(
+                                          acmHeadings[index],
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ],

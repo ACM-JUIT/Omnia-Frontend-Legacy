@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/Screens/Community/acm.dart';
 import 'package:omnia/Screens/Community/members.dart';
+<<<<<<< HEAD
 import 'package:omnia/Resources/Theme/theme.dart';
+=======
+// import 'package:omnia/Screens/Home/home.dart';
+import 'package:omnia/Screens/Home/homescreen.dart';
+import 'package:omnia/Theme/theme.dart';
+>>>>>>> master
 
 class Community extends StatelessWidget {
   const Community({super.key});
@@ -12,12 +18,18 @@ class Community extends StatelessWidget {
       length: 2,
       child: Scaffold(
           appBar: AppBar(
-            automaticallyImplyLeading: false,
-            iconTheme: const IconThemeData(color: Colors.white),
             backgroundColor: primaryColor,
             title: const Text(
               "Community",
               style: TextStyle(color: Colors.white),
+            ),
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const HomeScreen();
+                }));
+              },
             ),
             bottom: const TabBar(
               labelPadding: EdgeInsets.all(3),
