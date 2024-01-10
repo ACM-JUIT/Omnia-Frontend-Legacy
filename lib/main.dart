@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:omnia/Signup/Splash/splash0.dart';
-import 'Signup/signuppagewolf.dart';
+import 'Screens/Signup/signuppagewolf.dart';
 
 void main() {
   runApp(const MyApp());

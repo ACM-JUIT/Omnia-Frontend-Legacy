@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/Screens/Community/acmevents.dart';
 import 'package:omnia/cardvalues.dart';
-import 'package:omnia/Theme/theme.dart';
+import 'package:omnia/Resources/Theme/theme.dart';
 
 class ACM extends StatefulWidget {
   const ACM({Key? key}) : super(key: key);

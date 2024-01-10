@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Signup/Splash/splash2.dart';
+import 'package:omnia/Screens/Signup/Splash/splash5.dart';
 
-class Splash1 extends StatefulWidget {
-  const Splash1({super.key});
+class Splash4 extends StatefulWidget {
+  const Splash4({super.key});
 
   @override
-  State<Splash1> createState() => _Splash1State();
+  State<Splash4> createState() => _Splash4State();
 }
 
-class _Splash1State extends State<Splash1> {
+class _Splash4State extends State<Splash4> {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1250), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const Splash2(),
-          settings: const RouteSettings(name: 'Splash 2'),
+          builder: (context) => const Splash5(),
+          settings: const RouteSettings(name: 'Splash 5'),
         ),
       );
     });
@@ -40,17 +40,32 @@ class _Splash1State extends State<Splash1> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Hero(
-                tag: 'animatedElement', // Unique tag for the hero animation
-                child: Container(
-                  width: 125,
-                  height: 125,
-                  // color: Colors.white,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(40)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Omnia',
+                    style: TextStyle(
+                      fontSize: 68,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
-                ),
+                  Hero(
+                    tag: 'animatedElement', // Unique tag for the hero animation
+                    child: Container(
+                      width: 68,
+                      height: 68,
+                      // color: Colors.white,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/wot.png")),
+                        // color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 240,

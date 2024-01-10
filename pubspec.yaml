@@ -71,14 +71,14 @@ flutter:
     - assets/acmlogo.png
     - assets/name.png
     - assets/wot.png
-    - assets/hache.png
-    - assets/horizon.png
-    - assets/qriosity.png
-    - assets/insideout.png
-    - assets/techoween.png 
-    - assets/2021.png
-    - assets/2020.png
-    - assets/2019.png
+    - assets/proj.png
+    - assets/gradi.png
+    - assets/lgb.png
+    - assets/gitboi.png
+    - assets/linky.png
+    - assets/x.png
+    - assets/proficun.png
+    - assets/luffy.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

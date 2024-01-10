@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:omnia/Screens/Home/homescreen.dart';
-import 'package:omnia/Theme/theme.dart';
+import 'package:omnia/Resources/Theme/theme.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({super.key});

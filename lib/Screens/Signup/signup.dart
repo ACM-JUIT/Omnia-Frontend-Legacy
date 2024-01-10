@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/Screens/Home/homescreen.dart';
-import 'package:omnia/Signup/signup.dart';
+import 'package:omnia/Screens/Signup/login.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Signup> createState() => _SignupState();
 }
 
-class _LoginState extends State<Login> {
+class _SignupState extends State<Signup> {
   // final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final usern = TextEditingController();
   final passk = TextEditingController();
@@ -20,6 +20,7 @@ class _LoginState extends State<Login> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        iconTheme: const IconThemeData(color: Colors.white),
         // scrolledUnderElevation: double.infinity,
         // elevation: 0.0,
         // forceMaterialTransparency: true,
@@ -63,7 +64,7 @@ class _LoginState extends State<Login> {
                         width: 50,
                       ),
                       Text(
-                        'Log In',
+                        'Register',
                         // textAlign: TextAlign.end,
                         style: TextStyle(
                             color: Colors.white,
@@ -90,7 +91,7 @@ class _LoginState extends State<Login> {
                               )),
                               prefixIcon: Icon(Icons.email_outlined,
                                   color: Colors.white),
-                              hintText: 'Log-In Using JUIT ID',
+                              hintText: 'Register Using JUIT ID',
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w300,
                                   color: Colors.white),
@@ -128,7 +129,7 @@ class _LoginState extends State<Login> {
                               )),
                               prefixIcon: Icon(Icons.lock_person_outlined,
                                   color: Colors.white),
-                              hintText: 'Password',
+                              hintText: 'Create Password',
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w300,
                                   color: Colors.white),
@@ -160,7 +161,7 @@ class _LoginState extends State<Login> {
                             width: 160,
                             child: ElevatedButton(
                               child: const Text(
-                                'Log In',
+                                'Sign Up',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 25,
@@ -171,8 +172,6 @@ class _LoginState extends State<Login> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => const HomeScreen(),
-                                      settings:
-                                          const RouteSettings(name: 'Home'),
                                     ));
                               },
                               // icon: const Icon(Icons.arrow_forward,
@@ -183,7 +182,7 @@ class _LoginState extends State<Login> {
                             // crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const Text(
-                                'Don\'t Have an Account?',
+                                'Have an Account?',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 13,
@@ -195,10 +194,10 @@ class _LoginState extends State<Login> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Signup()));
+                                                const Login()));
                                   },
                                   child: const Text(
-                                    'Sign Up',
+                                    'Log In',
                                     style: TextStyle(
                                         color: Colors.purple,
                                         fontSize: 13,

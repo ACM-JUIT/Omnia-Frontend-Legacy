@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Signup/signup.dart';
+import 'package:omnia/Screens/Signup/signup.dart';
 
 class SignupAnimate extends StatefulWidget {
   const SignupAnimate({super.key});
