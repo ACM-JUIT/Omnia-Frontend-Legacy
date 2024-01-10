@@ -76,7 +76,7 @@ class _MembersState extends State<Members> {
                   decoration: BoxDecoration(
                     color: cardColor,
                     borderRadius: BorderRadius.circular(9.0),
-                    border: Border.all(color: itemColor),
+                    // border: Border.all(color: itemColor),
                   ),
                   margin: const EdgeInsets.all(8.0),
                   padding: const EdgeInsets.all(8.0),
