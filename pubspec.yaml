@@ -30,11 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  google_nav_bar: ^5.0.6
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  slide_countdown: ^1.5.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -69,6 +70,14 @@ flutter:
     - assets/acmlogo.png
     - assets/name.png
     - assets/wot.png
+    - assets/proj.png
+    - assets/gradi.png
+    - assets/lgb.png
+    - assets/gitboi.png
+    - assets/linky.png
+    - assets/x.png
+    - assets/proficun.png
+    - assets/luffy.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
