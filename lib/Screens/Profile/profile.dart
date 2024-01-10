@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Theme/theme.dart';
+import 'package:omnia/Resources/Theme/theme.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: primaryColor,
-      body: Center(
-        child: Text("Profile",
-            style: TextStyle(color: Colors.white, fontSize: 30)),
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+            iconTheme: const IconThemeData(color: Colors.white),
+            backgroundColor: primaryColor,
+            title: const Text(
+              "My Profile",
+              style: TextStyle(color: Colors.white),
+            ),
       ),
+      backgroundColor: primaryColor,
+      body: Placeholder(),
     );
   }
 }

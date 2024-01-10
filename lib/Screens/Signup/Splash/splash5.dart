@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Signup/signuppagewolf.dart';
+import 'package:omnia/Screens/Signup/signuppagewolf.dart';
 
 class Splash5 extends StatefulWidget {
   const Splash5({super.key});

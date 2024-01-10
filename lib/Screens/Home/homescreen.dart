@@ -4,8 +4,9 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:omnia/Screens/Community/community.dart';
 import 'package:omnia/Screens/Home/home.dart';
 import 'package:omnia/Screens/Profile/profile.dart';
+// import 'package:omnia/Screens/Work/projects.dart';
 import 'package:omnia/Screens/Work/work.dart';
-import 'package:omnia/Theme/theme.dart';
+import 'package:omnia/Resources/Theme/theme.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

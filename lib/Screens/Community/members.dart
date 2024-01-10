@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Theme/theme.dart';
+import 'package:omnia/Resources/Theme/theme.dart';
 
 class Members extends StatefulWidget {
   const Members({super.key});

@@ -70,6 +70,12 @@ flutter:
     - assets/acmlogo.png
     - assets/name.png
     - assets/wot.png
+    - assets/proj.png
+    - assets/gradi.png
+    - assets/lgb.png
+    - assets/goog.png
+    - assets/fb.png
+    - assets/x.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

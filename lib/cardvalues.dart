@@ -38,6 +38,29 @@ List<String> acmSubheadings = [
   "Tenure",
 ];
 
+const projectCardno=4;
+List<String> projectHeadings = [
+  "Omnia",
+  "Projectron",
+  "CTF",
+  "Mask Detector"
+];
+
+List<String> projectSubheadings = [
+  "App",
+  "Website",
+  "App",
+  "AI/ML",
+];
+
+const resoCardno=4;
+List<String> resoHeadings = [
+  "\t\t\t\t   App\nDevelopment",
+  "\t\t\t\t   Web\nDevelopment",
+  "DSA",
+  "AI/ML"
+];
+
 // List<String> acmImages = [
 //   "assets/image1.png",
 //   "assets/image2.png",

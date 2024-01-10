@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:omnia/Signup/Splash/splash3.dart';
+import 'package:omnia/Screens/Signup/Splash/splash1.dart';
 
-class Splash2 extends StatefulWidget {
-  const Splash2({super.key});
+class Splash0 extends StatefulWidget {
+  const Splash0({super.key});
 
   @override
-  State<Splash2> createState() => _Splash2State();
+  State<Splash0> createState() => _Splash0State();
 }
 
-class _Splash2State extends State<Splash2> {
+class _Splash0State extends State<Splash0> {
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(milliseconds: 1500), () {
+    Future.delayed(const Duration(milliseconds: 1250), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const Splash3(),
-          settings: const RouteSettings(name: 'Splash 3'),
+          builder: (context) => const Splash1(),
+          settings: const RouteSettings(name: 'Splash 1'),
         ),
       );
     });
@@ -44,7 +44,7 @@ class _Splash2State extends State<Splash2> {
                 tag: 'animatedElement', // Unique tag for the hero animation
                 child: TweenAnimationBuilder<double>(
                   tween: Tween(begin: 0.0, end: 0.25),
-                  duration: const Duration(milliseconds: 1500),
+                  duration: const Duration(milliseconds: 1250),
                   builder: (context, value, child) {
                     return Transform.rotate(
                       angle: value * 4 * 3.141, // quarter spin with some bounce
@@ -55,18 +55,18 @@ class _Splash2State extends State<Splash2> {
                     );
                   },
                   child: Container(
-                    width: 200,
-                    height: 200,
+                    width: 5,
+                    height: 5,
                     // color: Colors.white,
                     decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(40)),
+                      color: Colors.black,
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
                   ),
                 ),
               ),
               const SizedBox(
-                height: 220,
+                height: 300,
               ),
               Container(
                 height: 76,
