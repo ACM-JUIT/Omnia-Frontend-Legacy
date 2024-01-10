@@ -47,13 +47,34 @@ List<String> acmSubheadings = [
   "Tenure",
 ];
 
-const projectCardno=4;
-List<String> projectHeadings = [
-  "Omnia",
-  "Projectron",
-  "CTF",
-  "Mask Detector"
+List<String> tenureImages = [
+  "assets/2021.png",
+  "assets/2020.png",
+  "assets/2019.png",
 ];
+
+//.......MEMBERS CARD VALUES........//
+
+const membersCardNo = 5;
+
+List<String> initials = [
+  'JD',
+  'AS',
+  'MS',
+  'LW',
+  'EJ',
+];
+
+List<String> usernames = [
+  'john_doe',
+  'alice_smith',
+  'mark_sullivan',
+  'lisa_walker',
+  'eric_jones',
+];
+
+const projectCardno = 4;
+List<String> projectHeadings = ["Omnia", "Projectron", "CTF", "Mask Detector"];
 
 List<String> projectSubheadings = [
   "App",
@@ -62,7 +83,7 @@ List<String> projectSubheadings = [
   "AI/ML",
 ];
 
-const resoCardno=4;
+const resoCardno = 4;
 List<String> resoHeadings = [
   "\t\t\t\t   App\nDevelopment",
   "\t\t\t\t   Web\nDevelopment",
@@ -75,4 +96,3 @@ List<String> acmImages = [
   "assets/qriosity.png",
   "assets/qriosity.png",
 ];
-

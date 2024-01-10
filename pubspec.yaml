@@ -79,6 +79,14 @@ flutter:
     - assets/x.png
     - assets/proficun.png
     - assets/luffy.png
+    - assets/hache.png
+    - assets/horizon.png
+    - assets/qriosity.png
+    - assets/insideout.png
+    - assets/techoween.png 
+    - assets/2021.png
+    - assets/2020.png
+    - assets/2019.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
