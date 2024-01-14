@@ -14,13 +14,16 @@ class MainHome extends StatefulWidget {
 }
 
 class _MainHomeState extends State<MainHome> {
-  void _navigateToDetailsPage(
-      String heading, String subheading, String imageUrl) {
+  void _navigateToDetailsPage(String heading, String subheading,
+      String imageUrl, String eventsDescription) {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => DetailsPage(
-            heading: heading, subheading: subheading, imageUrl: imageUrl),
+            heading: heading,
+            subheading: subheading,
+            imageUrl: imageUrl,
+            eventsDescription: eventsDescription),
       ),
     );
   }
@@ -140,7 +143,7 @@ class _MainHomeState extends State<MainHome> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      launchUrlString(registerLink);
+                                      launchUrlString(registerUrl);
                                     },
                                     child: Container(
                                       height: 20,
@@ -206,6 +209,7 @@ class _MainHomeState extends State<MainHome> {
                         homeHeadings[index],
                         homeSubheadings[index],
                         homeImagesList[index],
+                        eventsDescription[index],
                       );
                     },
                     child: Padding(
