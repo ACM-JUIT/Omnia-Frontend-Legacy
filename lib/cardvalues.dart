@@ -5,7 +5,7 @@ const homeCardNo = 4;
 
 const homeImage = "assets/techoween.png";
 
-const registerLink = "https://www.youtube.com/";
+const registerUrl = "https://www.google.com";
 
 List<String> homeHeadings = [
   "Hache",
@@ -27,6 +27,14 @@ List<String> homeImagesList = [
   "assets/insideout.png",
   "assets/horizon.png",
 ];
+
+List<String> eventsDescription = [
+  "Hache is a CTF (Capture the Flag) event where participants will be given a set of challenges to solve. The challenges will be based on various domains of Cyber Security like Web Exploitation, Cryptography, Forensics, etc. The participants will be given a flag for each challenge they solve. The participant with the maximum number of flags will be declared as the winner.",
+  "Qriosity is a CTF (Capture the Flag) event where participants will be given a set of challenges to solve. The challenges will be based on various domains of Cyber Security like Web Exploitation, Cryptography, Forensics, etc. The participants will be given a flag for each challenge they solve. The participant with the maximum number of flags will be declared as the winner.",
+  "Inside-Out is a UI/UX event where participants will be given a set of challenges to solve. The challenges will be based on various domains of UI/UX like Web Designing, App Designing, etc. The participants will be given a flag for each challenge they solve. The participant with the maximum number of flags will be declared as the winner.",
+  "Adventum is a Hackathon event where participants will be given a set of challenges to solve. The challenges will be based on various domains of Cyber Security like Web Exploitation, Cryptography, Forensics, etc. The participants will be given a flag for each challenge they solve. The participant with the maximum number of flags will be declared as the winner.",
+];
+
 //.......COMMUNITY CARD VALUES........//
 
 const acmCardNo = 3;
