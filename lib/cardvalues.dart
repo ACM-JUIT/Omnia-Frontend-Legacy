@@ -35,6 +35,13 @@ List<String> eventsDescription = [
   "Adventum is a Hackathon event where participants will be given a set of challenges to solve. The challenges will be based on various domains of Cyber Security like Web Exploitation, Cryptography, Forensics, etc. The participants will be given a flag for each challenge they solve. The participant with the maximum number of flags will be declared as the winner.",
 ];
 
+List<String> ytID = [
+  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
+  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
+  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
+  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
+];
+
 //.......COMMUNITY CARD VALUES........//
 
 const acmCardNo = 3;
