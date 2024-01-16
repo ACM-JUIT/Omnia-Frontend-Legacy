@@ -30,11 +30,16 @@ class _DetailsPageState extends State<DetailsPage> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: widget.ytID,
+      initialVideoId: _extractVideoId(widget.ytID),
       flags: const YoutubePlayerFlags(
         autoPlay: false,
       ),
     );
+  }
+
+  String _extractVideoId(String url) {
+    final Uri uri = Uri.parse(url);
+    return YoutubePlayer.convertUrlToId(uri.toString()) ?? '';
   }
 
   @override
@@ -91,7 +96,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
                     AspectRatio(
-                      aspectRatio: 16 / 9, // Adjust as needed
+                      aspectRatio: 16 / 9,
                       child: YoutubePlayer(
                         controller: _controller,
                         showVideoProgressIndicator: true,

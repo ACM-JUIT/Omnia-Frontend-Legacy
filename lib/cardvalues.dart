@@ -36,10 +36,10 @@ List<String> eventsDescription = [
 ];
 
 List<String> ytID = [
-  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
-  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
-  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
-  "https://www.youtube.com/watch?v=kIULZM7-kqQ",
+  "https://www.youtube.com/watch?v=ZVfrwYFZzqM",
+  "https://www.youtube.com/watch?v=Yvdip9_JeAE",
+  "https://www.youtube.com/watch?v=Yvdip9_JeAE",
+  "https://www.youtube.com/watch?v=Yvdip9_JeAE",
 ];
 
 //.......COMMUNITY CARD VALUES........//
