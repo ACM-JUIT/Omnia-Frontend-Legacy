@@ -15,7 +15,7 @@ class MainHome extends StatefulWidget {
 
 class _MainHomeState extends State<MainHome> {
   void _navigateToDetailsPage(String heading, String subheading,
-      String imageUrl, String eventsDescription) {
+      String imageUrl, String eventsDescription, String ytID) {
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -23,7 +23,8 @@ class _MainHomeState extends State<MainHome> {
             heading: heading,
             subheading: subheading,
             imageUrl: imageUrl,
-            eventsDescription: eventsDescription),
+            eventsDescription: eventsDescription,
+            ytID: ytID),
       ),
     );
   }
@@ -210,6 +211,7 @@ class _MainHomeState extends State<MainHome> {
                         homeSubheadings[index],
                         homeImagesList[index],
                         eventsDescription[index],
+                        ytID[index],
                       );
                     },
                     child: Padding(
