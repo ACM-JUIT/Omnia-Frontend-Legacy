@@ -46,6 +46,7 @@ class _DetailsPageState extends State<DetailsPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: navColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -57,53 +58,59 @@ class _DetailsPageState extends State<DetailsPage> {
                   color: Colors.grey[200],
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        widget.heading,
-                        style: const TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          widget.heading,
+                          style: const TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: ReadMoreText(
-                        widget.eventsDescription,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        trimLines: 5,
-                        colorClickableText: navColor,
-                        trimMode: TrimMode.Line,
-                        trimCollapsedText: 'Read more',
-                        trimExpandedText: 'Read less',
-                        moreStyle: const TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        lessStyle: const TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.01,
+                      ),
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: ReadMoreText(
+                          widget.eventsDescription,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          trimLines: 5,
+                          colorClickableText: navColor,
+                          trimMode: TrimMode.Length,
+                          trimCollapsedText: 'Read more',
+                          trimExpandedText: 'Read less',
+                          moreStyle: const TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          lessStyle: const TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
-                    AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: YoutubePlayer(
-                        controller: _controller,
-                        showVideoProgressIndicator: true,
-                        progressIndicatorColor: Colors.blueAccent,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.01,
                       ),
-                    ),
-                  ],
+                      AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: YoutubePlayer(
+                          controller: _controller,
+                          showVideoProgressIndicator: true,
+                          progressIndicatorColor: Colors.blueAccent,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

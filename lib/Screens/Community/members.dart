@@ -81,23 +81,21 @@ class _MembersState extends State<Members> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Container(
-                        height: 46,
-                        width: 46,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color.fromRGBO(217, 217, 217, 1),
-                        ),
-                        alignment: Alignment.center,
-                        child: const Icon(
-                          Icons.image,
-                          color: imageColor,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: Image.asset(
+                          memberImages[index],
+                          alignment: Alignment.center,
+                          fit: BoxFit.cover,
                         ),
                       ),
                       const SizedBox(width: 8.0),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          const SizedBox(
+                            height: 5.0,
+                          ),
                           Text(
                             initials[itemIndex],
                             style: const TextStyle(
