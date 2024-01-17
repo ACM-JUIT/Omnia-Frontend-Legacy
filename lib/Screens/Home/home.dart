@@ -167,9 +167,7 @@ class _MainHomeState extends State<MainHome> {
                                   ),
                                 ],
                               ),
-                              const SizedBox(
-                                  height:
-                                      10), // Add spacing between the two rows
+                              const SizedBox(height: 10),
                               const Text(
                                 "In October's spirit, screens ignite Coding, spooks, and thrills unit...",
                                 overflow: TextOverflow.ellipsis,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/Resources/Theme/theme.dart';
+import 'package:omnia/Screens/Home/homescreen.dart';
 import 'package:omnia/Screens/Work/projects.dart';
 import 'package:omnia/Screens/Work/reso.dart';
 
@@ -19,11 +20,17 @@ class Work extends StatelessWidget {
               "Work",
               style: TextStyle(color: Colors.white),
             ),
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const HomeScreen();
+                }));
+              },
+            ),
             bottom: const TabBar(
               // dividerColor: ,
-              labelStyle: TextStyle(
-                fontSize: 20
-              ),
+              labelStyle: TextStyle(fontSize: 20),
               labelPadding: EdgeInsets.all(3),
               indicatorColor: itemColor,
               indicatorSize: TabBarIndicatorSize.tab,

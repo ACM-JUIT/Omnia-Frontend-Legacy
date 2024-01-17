@@ -92,6 +92,11 @@ flutter:
     - assets/2021.png
     - assets/2020.png
     - assets/2019.png
+    - assets/profile1.png
+    - assets/profile2.png
+    - assets/profile3.png
+    - assets/profile4.png
+    - assets/profile5.png
  
     # - images/a_dot_ham.jpeg
 

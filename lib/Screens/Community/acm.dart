@@ -12,13 +12,16 @@ class ACM extends StatefulWidget {
 
 class _ACMState extends State<ACM> {
   // Function to navigate to the details page with the selected card's data
-  void _navigateToDetailsPage(
-      String heading, String subheading, String imageUrl) {
+  void _navigateToDetailsPage(String heading, String subheading,
+      String imageUrl, String tenureDescription) {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => ACMDetailsPage(
-            heading: heading, subheading: subheading, imageUrl: imageUrl),
+            heading: heading,
+            subheading: subheading,
+            imageUrl: imageUrl,
+            tenureDescription: tenureDescription),
       ),
     );
   }
@@ -80,7 +83,8 @@ class _ACMState extends State<ACM> {
                       _navigateToDetailsPage(
                         acmSubheadings[index],
                         acmHeadings[index],
-                        acmImages[index],
+                        tenureImages[index],
+                        tenureDescription[index],
                       );
                     },
                     child: Padding(
