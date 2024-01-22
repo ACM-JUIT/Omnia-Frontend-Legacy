@@ -39,7 +39,14 @@ List<String> ytID = [
   "https://www.youtube.com/watch?v=ZVfrwYFZzqM",
   "https://www.youtube.com/watch?v=Yvdip9_JeAE",
   "https://www.youtube.com/watch?v=Yvdip9_JeAE",
-  "https://www.youtube.com/watch?v=Yvdip9_JeAE",
+  "", //empty for no video
+];
+
+List<String> eventImages = [
+  "assets/hache.png",
+  "assets/qriosity.png",
+  "assets/insideout.png",
+  "assets/horizon.png",
 ];
 
 //.......COMMUNITY CARD VALUES........//
