@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/Resources/Theme/theme.dart';
+import 'package:omnia/cardvalues.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:readmore/readmore.dart';
 
@@ -44,6 +45,8 @@ class _DetailsPageState extends State<DetailsPage> {
 
   @override
   Widget build(BuildContext context) {
+    int index = ytID.indexOf(widget.ytID);
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: navColor,
@@ -103,11 +106,18 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                       AspectRatio(
                         aspectRatio: 16 / 9,
-                        child: YoutubePlayer(
-                          controller: _controller,
-                          showVideoProgressIndicator: true,
-                          progressIndicatorColor: Colors.blueAccent,
-                        ),
+                        child: widget.ytID.isNotEmpty
+                            ? YoutubePlayer(
+                                controller: _controller,
+                                showVideoProgressIndicator: true,
+                                progressIndicatorColor: Colors.blueAccent,
+                              )
+                            : Image.asset(
+                                eventImages[index],
+                                fit: BoxFit.cover,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.3,
+                              ),
                       ),
                     ],
                   ),
