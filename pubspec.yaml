@@ -42,6 +42,7 @@ dependencies:
   youtube_player_flutter: ^8.1.2
   flutter_inappwebview: ^5.8.0
   webview_flutter: ^4.4.4
+  firebase_core: ^2.24.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0

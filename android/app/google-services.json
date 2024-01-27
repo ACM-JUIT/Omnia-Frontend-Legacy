@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685927582427",
+    "project_id": "omnia-2024",
+    "storage_bucket": "omnia-2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685927582427:android:d618d5034dcac1f4dc1afe",
+        "android_client_info": {
+          "package_name": "com.example.omnia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXYD5adHd9pAn4ZumFV7vrhUozjWb_P-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
