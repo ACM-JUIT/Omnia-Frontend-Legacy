@@ -1,39 +1,39 @@
 //......HOME CARD VALUES......//
 
-// const setDate = "10-05-2024";
-// const homeCardNo = 4;
+const setDate = "10-05-2024";
+const homeCardNo = 4;
 
-// const homeImage = "assets/techoween.png";
+const homeImage = "assets/techoween.png";
 
-// const registerUrl = "https://www.google.com";
+const registerUrl = "https://www.google.com";
 
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 
-Future<void> fetchHomeCardValues() async {
-  try {
-    DocumentSnapshot snapshot = await FirebaseFirestore.instance
-        .collection('home_card_values')
-        .doc(
-            'default') // Use the document ID you specified or let Firestore auto-generate
-        .get();
+// Future<void> fetchHomeCardValues() async {
+//   try {
+//     DocumentSnapshot snapshot = await FirebaseFirestore.instance
+//         .collection('home_card_values')
+//         .doc(
+//             'default') // Use the document ID you specified or let Firestore auto-generate
+//         .get();
 
-    if (snapshot.exists) {
-      // Retrieve values from the snapshot
-      String setDate = snapshot['setDate'];
-      int homeCardNo = snapshot['homeCardNo'];
-      String homeImage = snapshot['homeImage'];
-      String registerUrl = snapshot['registerUrl'];
-      // ... and so on for other fields
+//     if (snapshot.exists) {
+//       // Retrieve values from the snapshot
+//       String setDate = snapshot['setDate'];
+//       int homeCardNo = snapshot['homeCardNo'];
+//       String homeImage = snapshot['homeImage'];
+//       String registerUrl = snapshot['registerUrl'];
+//       // ... and so on for other fields
 
-      // Now, you can use these values in your app
-    } else {
-      // Document does not exist
-      print('Document does not exist');
-    }
-  } catch (e) {
-    print('Error fetching home card values: $e');
-  }
-}
+//       // Now, you can use these values in your app
+//     } else {
+//       // Document does not exist
+//       print('Document does not exist');
+//     }
+//   } catch (e) {
+//     print('Error fetching home card values: $e');
+//   }
+// }
 
 List<String> homeHeadings = [
   "Hache",
