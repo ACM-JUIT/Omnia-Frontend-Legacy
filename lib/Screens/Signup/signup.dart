@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:omnia/Screens/Home/homescreen.dart';
 import 'package:omnia/Screens/Signup/login.dart';
 
@@ -13,7 +12,6 @@ class Signup extends StatefulWidget {
 class _SignupState extends State<Signup> {
   final TextEditingController usern = TextEditingController();
   final TextEditingController passk = TextEditingController();
-  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +50,7 @@ class _SignupState extends State<Signup> {
                       SizedBox(
                         width: 50,
                       ),
-                      Align(
-                        alignment: Alignment.center,
+                      Center(
                         child: Text(
                           'Register',
                           style: TextStyle(
@@ -140,26 +137,13 @@ class _SignupState extends State<Signup> {
                             height: 50,
                             width: 160,
                             child: ElevatedButton(
-                              onPressed: () async {
-                                try {
-                                  UserCredential userCredential = await _auth
-                                      .createUserWithEmailAndPassword(
-                                    email: usern.text.trim(),
-                                    password: passk.text.trim(),
-                                  );
-                                  print(
-                                      'User registered: ${userCredential.user?.email}');
-                                  // Navigate to HomeScreen or perform other actions upon successful registration
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const HomeScreen(),
-                                    ),
-                                  );
-                                } catch (e) {
-                                  print('Error during registration: $e');
-                                  // Handle registration failure (e.g., display an error message)
-                                }
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const HomeScreen(),
+                                  ),
+                                );
                               },
                               child: const Text(
                                 'Sign Up',
