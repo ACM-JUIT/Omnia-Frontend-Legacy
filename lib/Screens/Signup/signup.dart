@@ -148,11 +148,18 @@ class _SignupState extends State<Signup> {
                               child: const Text(
                                 'Sign Up',
                                 style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w800,
-                                ),
+                                    color: Colors.black,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w800),
                               ),
+                              onPressed: () {
+                                Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const HomeScreen(),
+                                    ));
+                              },
+                              // icon: const Icon(Icons.arrow_forward,
                             ),
                           ),
                           Row(

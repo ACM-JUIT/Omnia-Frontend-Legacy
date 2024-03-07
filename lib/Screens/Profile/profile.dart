@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:omnia/Resources/Theme/theme.dart';
 import 'package:omnia/Screens/Home/homescreen.dart';
 
+import '../Signup/signup.dart';
+
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
@@ -9,6 +11,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          
           automaticallyImplyLeading: false,
           iconTheme: const IconThemeData(color: Colors.white),
           backgroundColor: primaryColor,
@@ -49,13 +52,27 @@ class Profile extends StatelessWidget {
               ),
 
               //Name
-              const Text(
-                'Monkey D. Luffy',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 24,
-                    color: Colors.white),
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(width: 50,),
+                  const Text(
+                    'Monkey D. Luffy',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 24,
+                        color: Colors.white),
+                  ),
+                  const SizedBox(width: 10,),
+                   IconButton(color: Colors.white,
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const Signup(),
+                        settings: const RouteSettings(name: 'Signup'),
+                      ));
+                    }, 
+                    icon: const Icon(Icons.mode_edit_outline_outlined))
+                ],
               ),
               const SizedBox(
                 height: 4,
