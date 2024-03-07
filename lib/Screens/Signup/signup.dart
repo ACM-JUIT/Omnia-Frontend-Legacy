@@ -168,7 +168,7 @@ class _SignupState extends State<Signup> {
                                     fontWeight: FontWeight.w800),
                               ),
                               onPressed: () {
-                                Navigator.push(
+                                Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => const HomeScreen(),

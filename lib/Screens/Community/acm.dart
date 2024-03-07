@@ -30,52 +30,53 @@ class _ACMState extends State<ACM> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 220,
-                width: 380,
-                decoration: BoxDecoration(
-                  border: Border.all(color: itemColor),
-                  borderRadius: BorderRadius.circular(10),
-                  color: cardColor,
-                ),
-                child: const Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(20.0),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Image(
-                          image: AssetImage(acmLogo),
-                          color: itemColor,
-                          height: 35,
-                          width: 100,
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          acmDescription,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 220,
+                  width: 380,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: itemColor),
+                    borderRadius: BorderRadius.circular(10),
+                    color: cardColor,
+                  ),
+                  child: const Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 15,
                           ),
-                        ),
-                      ],
+                          Image(
+                            image: AssetImage(acmLogo),
+                            color: itemColor,
+                            height: 35,
+                            width: 100,
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            acmDescription,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Expanded(
-              child: ListView.builder(
+              ListView.builder(
+                shrinkWrap: true,
                 itemCount: acmCardNo,
                 itemBuilder: (context, index) {
                   return GestureDetector(
@@ -151,8 +152,8 @@ class _ACMState extends State<ACM> {
                   );
                 },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

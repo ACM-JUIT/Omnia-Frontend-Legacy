@@ -40,7 +40,7 @@ class _SignupState extends State<SignupAnimate> {
                             MaterialStatePropertyAll<Color>(Colors.white),
                       ),
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const Signup(),
