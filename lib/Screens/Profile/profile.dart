@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:omnia/Resources/Theme/theme.dart';
 import 'package:omnia/Screens/Home/homescreen.dart';
-
-import '../Signup/signup.dart';
+import 'package:omnia/Screens/Profile/profedit.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -67,8 +66,8 @@ class Profile extends StatelessWidget {
                    IconButton(color: Colors.white,
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => const Signup(),
-                        settings: const RouteSettings(name: 'Signup'),
+                        builder: (context) => const EditProfile(),
+                        settings: const RouteSettings(name: 'Edit Profile'),
                       ));
                     }, 
                     icon: const Icon(Icons.mode_edit_outline_outlined))
@@ -92,32 +91,47 @@ class Profile extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    height: 24,
-                    width: 24,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/linky.png"))),
+                  GestureDetector(
+                    onTap: () {
+                      
+                    },
+                    child: Container(
+                      height: 24,
+                      width: 24,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/linky.png"))),
+                    ),
                   ),
                   const SizedBox(
                     width: 16,
                   ),
-                  Container(
-                    height: 24,
-                    width: 24,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/gitboi.png"))),
+                  GestureDetector(
+                    onTap: () {
+                      
+                    },
+                    child: Container(
+                      height: 24,
+                      width: 24,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/gitboi.png"))),
+                    ),
                   ),
                   const SizedBox(
                     width: 16,
                   ),
-                  Container(
-                    height: 24,
-                    width: 24,
-                    decoration: const BoxDecoration(
-                        image:
-                            DecorationImage(image: AssetImage("assets/x.png"))),
+                  GestureDetector(
+                    onTap: () {
+                      
+                    },
+                    child: Container(
+                      height: 24,
+                      width: 24,
+                      decoration: const BoxDecoration(
+                          image:
+                              DecorationImage(image: AssetImage("assets/x.png"))),
+                    ),
                   ),
                 ],
               ),
