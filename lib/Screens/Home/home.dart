@@ -99,7 +99,8 @@ class _MainHomeState extends State<MainHome> {
                                   child: Stack(
                                     children: [
                                       ClipRRect(
-                                        borderRadius: BorderRadius.circular(10.0),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                         child: Image.asset(
                                           homeImage,
                                           alignment: Alignment.center,
@@ -153,7 +154,8 @@ class _MainHomeState extends State<MainHome> {
                                         width: 80,
                                         decoration: BoxDecoration(
                                           border: Border.all(color: itemColor),
-                                          borderRadius: BorderRadius.circular(6),
+                                          borderRadius:
+                                              BorderRadius.circular(6),
                                           color: dateColor,
                                         ),
                                         child: const Center(
