@@ -124,8 +124,8 @@ class _EditProfileState extends State<EditProfile> {
   }
 
   Future<void> _pickImage() async {
-    final ImagePicker _picker = ImagePicker();
-    final XFile? image = await _picker.pickImage(
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(
       source: ImageSource.gallery, // Or ImageSource.camera 
     );
 
