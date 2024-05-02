@@ -1,26 +1,51 @@
 {
   "project_info": {
-    "project_number": "685927582427",
-    "project_id": "omnia-2024",
-    "storage_bucket": "omnia-2024.appspot.com"
+    "project_number": "755876834223",
+    "project_id": "omnia-acm",
+    "storage_bucket": "omnia-acm.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:685927582427:android:d618d5034dcac1f4dc1afe",
+        "mobilesdk_app_id": "1:755876834223:android:1cde954047b80d14521d5a",
         "android_client_info": {
           "package_name": "com.example.omnia"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "755876834223-n5s5uvrtskul4rg301lq6ljmhss2n2tg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.omnia",
+            "certificate_hash": "7a1ba826b191d33befa9cd55c801646a08cc3210"
+          }
+        },
+        {
+          "client_id": "755876834223-dp0oevosqh543p15e0bn8k4ueh9jo583.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXYD5adHd9pAn4ZumFV7vrhUozjWb_P-k"
+          "current_key": "AIzaSyCUsh9vYt1zcs3oIgozKIV4LlSgCKp5F40"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755876834223-dp0oevosqh543p15e0bn8k4ueh9jo583.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755876834223-ntjtp3duunj9igbkuv16nlkm72v8num0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.omnia"
+              }
+            }
+          ]
         }
       }
     }
