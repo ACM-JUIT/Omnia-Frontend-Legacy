@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "755876834223",
+    "project_id": "omnia-acm",
+    "storage_bucket": "omnia-acm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755876834223:android:eb24e69536bb2ce1521d5a",
+        "android_client_info": {
+          "package_name": "com.example.omnia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755876834223-dp0oevosqh543p15e0bn8k4ueh9jo583.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUsh9vYt1zcs3oIgozKIV4LlSgCKp5F40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755876834223-dp0oevosqh543p15e0bn8k4ueh9jo583.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755876834223-ntjtp3duunj9igbkuv16nlkm72v8num0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.omnia"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
